@@ -1,4 +1,6 @@
 package ru.avalon.java.dev.j10.labs.models;
+import ru.avalon.java.dev.j10.labs.commons.Address;
+//import ru.avalon.java.dev.j10.labs.commons.*;
 
 /**
  * Представление о человеке.
@@ -7,12 +9,54 @@ package ru.avalon.java.dev.j10.labs.models;
  * наделённая:
  * <ol>
  *     <li>именем;
- *     <li>паспортными данными;
+ *     <li>паспортными данными; 
  *     <li>пропиской по месту жительства.
  * </ol>
  */
-public class Person {
 
+public class Person {
+    
+    private String surname;
+    private String name;
+    private String middleName;
+    private String secondName;
+    //private Passport passport; //?
+    private Address address;
+
+    public Person(String surname, String name, String middleName, String secondName, Address address) {
+        this.surname = surname;
+        this.name = name;
+        this.middleName = middleName;
+        this.secondName = secondName;
+        this.address = address;
+    }
+    public Person(String surname, String name, String middleName, String secondName) {
+        this.surname = surname;
+        this.name = name;
+        this.middleName = middleName;
+        this.secondName = secondName;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+    
+    
+    
+    
+    
     /**
      * Возврвщает полное имя человека.
      * <p>
@@ -29,12 +73,23 @@ public class Person {
      * пробелом.
      *
      * @return имя человека в виде строки.
+     * OK!!!!!!!!!
      */
+    
+    
     public String getFullName() {
         /*
          * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
          */
-        return null;
+        if (this.surname!=null && this.name!=null && this.middleName!=null)
+            return this.surname + " " + this.name + " " + this.middleName;
+        else if (this.surname!=null && this.name!=null && this.middleName==null && this.secondName!=null)
+            return this.surname + " " + this.name + " " + this.secondName.substring(0, 1).toUpperCase() + ".";
+        else if (this.surname!=null && this.name!=null && this.middleName==null && this.secondName==null)
+            return this.surname + " " + this.name;
+        
+        else
+           return null;
     }
 
     /**
@@ -45,10 +100,12 @@ public class Person {
      *
      * @return адрес регистрации в виде строки.
      */
+   
+    
     public String getAddress() {
         /*
          * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
          */
-        return null;
+        return address.toString();
     }
 }

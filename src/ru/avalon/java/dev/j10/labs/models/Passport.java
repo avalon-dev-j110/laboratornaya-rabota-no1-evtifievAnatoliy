@@ -1,5 +1,7 @@
 package ru.avalon.java.dev.j10.labs.models;
 
+import ru.avalon.java.dev.j10.labs.commons.Address;
+
 /**
  * Представление о паспортных данных человека.
  * <p>
@@ -15,8 +17,21 @@ package ru.avalon.java.dev.j10.labs.models;
  *  <li> орган, выдавший документ.
  * </ol>
  */
-class Passport {
+public class Passport extends Person{
+    
+    private String passportNumber;
+    private String birthdayDate;
+    private String issureDate;
+    private String issure;
 
+    public Passport(String passportNumber, String birthdayDate, String issureDate, String issure, String surname, String name, String middleName, String secondName) {
+        super(surname, name, middleName, secondName);
+        this.passportNumber = passportNumber;
+        this.birthdayDate = birthdayDate;
+        this.issureDate = issureDate;
+        this.issure = issure;
+    }
+    
     /*
      * TODO(Студент): Закончить определение класса.
      *
@@ -37,4 +52,25 @@ class Passport {
      * 5. Обеспечте возможность использования класса за
      *    пределами пакета.
      */
+
+    public String getPassportNumber() {
+        return passportNumber;
+    }
+
+    public String getBirthdayDate() {
+        return birthdayDate;
+    }
+
+    public String getIssureDate() {
+        return issureDate;
+    }
+
+    public String getIssure() {
+        return issure;
+    }
+
+    
+
+    
+
 }
