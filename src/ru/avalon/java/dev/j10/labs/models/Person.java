@@ -20,22 +20,47 @@ public class Person {
     private String name;
     private String middleName;
     private String secondName;
-    //private Passport passport; //?
+    private String birthdayDate;
+    private Passport passport; 
     private Address address;
 
-    public Person(String surname, String name, String middleName, String secondName, Address address) {
+     public Person(String surname, String name, String middleName, String secondName, String birthdayDate) {
         this.surname = surname;
         this.name = name;
         this.middleName = middleName;
         this.secondName = secondName;
+        this.birthdayDate = birthdayDate;
+    }
+     
+    public Person(String surname, String name, String middleName, String secondName, String birthdayDate, Address address) {
+        this.surname = surname;
+        this.name = name;
+        this.middleName = middleName;
+        this.secondName = secondName;
+        this.birthdayDate = birthdayDate;
+        this.address = address;
+ 
+    }
+    
+    public Person(String surname, String name, String middleName, String secondName, String birthdayDate, Passport passport) {
+        this.surname = surname;
+        this.name = name;
+        this.middleName = middleName;
+        this.secondName = secondName;
+        this.birthdayDate = birthdayDate;
+        this.passport = passport;
+    }
+    
+    public Person(String surname, String name, String middleName, String secondName, String birthdayDate, Passport passport, Address address) {
+        this.surname = surname;
+        this.name = name;
+        this.middleName = middleName;
+        this.secondName = secondName;
+        this.birthdayDate = birthdayDate;
+        this.passport = passport;
         this.address = address;
     }
-    public Person(String surname, String name, String middleName, String secondName) {
-        this.surname = surname;
-        this.name = name;
-        this.middleName = middleName;
-        this.secondName = secondName;
-    }
+
 
     public String getSurname() {
         return surname;

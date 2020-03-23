@@ -17,17 +17,14 @@ import ru.avalon.java.dev.j10.labs.commons.Address;
  *  <li> орган, выдавший документ.
  * </ol>
  */
-public class Passport extends Person{
+public class Passport {
     
     private String passportNumber;
-    private String birthdayDate;
     private String issureDate;
     private String issure;
 
-    public Passport(String passportNumber, String birthdayDate, String issureDate, String issure, String surname, String name, String middleName, String secondName) {
-        super(surname, name, middleName, secondName);
+    public Passport(String passportNumber, String birthdayDate, String issureDate, String issure) {
         this.passportNumber = passportNumber;
-        this.birthdayDate = birthdayDate;
         this.issureDate = issureDate;
         this.issure = issure;
     }
@@ -57,16 +54,18 @@ public class Passport extends Person{
         return passportNumber;
     }
 
-    public String getBirthdayDate() {
-        return birthdayDate;
-    }
-
+   
     public String getIssureDate() {
         return issureDate;
     }
 
     public String getIssure() {
         return issure;
+    }
+
+    @Override
+    public String toString() {
+        return "Passport{" + "Паспорт:" + passportNumber + ", выданный" + issureDate + " года, выдан: " + issure + '}';
     }
 
     
