@@ -25,10 +25,10 @@ public class Main {
          *    чтобы она адресовала объект типа 'Person'
          *    описывающий человека по имени 'John Edvard Smith'.
          */
-        Person ivanov = new Person("Иванов", "Иван", "Иванович", null, 
+        Person ivanov = new Person("Иванов", "Иван", "Иванович", null, null,
                 new Address("Россия","Санкт-Петербург","улица Вавиловых","11", 89));
         
-        Person smith = new Person("John", "Edvard", null, "Smith",
+        Person smith = new Person("John", "Edvard", null, "Smith", null,
                 new Address("USA","Detroit","Six Aveny","541Y", 15));
         /*
          * TODO(Студент): Создайте несколько строковых переменных:
