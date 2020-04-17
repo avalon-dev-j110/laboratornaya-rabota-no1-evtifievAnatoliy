@@ -24,41 +24,27 @@ public class Person {
     private Passport passport; 
     private Address address;
 
-     public Person(String surname, String name, String middleName, String secondName, String birthdayDate) {
+     public Person(String surname, String name, String middleName, String secondName) {
         //to check
         this.surname = surname;
         this.name = name;
         this.middleName = middleName;
         this.secondName = secondName;
-        this.birthdayDate = birthdayDate;
     }
      
-    public Person(String surname, String name, String middleName, String secondName, String birthdayDate, Address address) {
-        this.surname = surname;
-        this.name = name;
-        this.middleName = middleName;
-        this.secondName = secondName;
-        this.birthdayDate = birthdayDate;
+    public Person(String surname, String name, String middleName, String secondName, Address address) {
+        this(surname, name, middleName, secondName);
         this.address = address;
  
     }
     
-    public Person(String surname, String name, String middleName, String secondName, String birthdayDate, Passport passport) {
-        this.surname = surname;
-        this.name = name;
-        this.middleName = middleName;
-        this.secondName = secondName;
-        this.birthdayDate = birthdayDate;
+    public Person(String surname, String name, String middleName, String secondName, Passport passport) {
+        this(surname, name, middleName, secondName);
         this.passport = passport;
     }
     
-    public Person(String surname, String name, String middleName, String secondName, String birthdayDate, Passport passport, Address address) {
-        this.surname = surname;
-        this.name = name;
-        this.middleName = middleName;
-        this.secondName = secondName;
-        this.birthdayDate = birthdayDate;
-        this.passport = passport;
+    public Person(String surname, String name, String middleName, String secondName, Passport passport, Address address) {
+        this(surname, name, middleName, secondName, passport);
         this.address = address;
     }
 
