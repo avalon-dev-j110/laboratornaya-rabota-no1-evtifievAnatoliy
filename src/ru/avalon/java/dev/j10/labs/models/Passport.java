@@ -23,7 +23,7 @@ public class Passport {
     private String issureDate;
     private String issure;
 
-    public Passport(String passportNumber, String birthdayDate, String issureDate, String issure) {
+    public Passport(String passportNumber, String issureDate, String issure) {
         this.passportNumber = passportNumber;
         this.issureDate = issureDate;
         this.issure = issure;
