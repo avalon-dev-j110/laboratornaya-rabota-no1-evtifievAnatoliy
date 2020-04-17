@@ -25,6 +25,7 @@ public class Person {
     private Address address;
 
      public Person(String surname, String name, String middleName, String secondName, String birthdayDate) {
+        //to check
         this.surname = surname;
         this.name = name;
         this.middleName = middleName;
